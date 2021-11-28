@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="jquery.js"></script>
+</head>
+
+<body>
+    <div id="main" class="vh-100 vw-100 bg-primary">
+        <div class="row h-100">
+            <div class="col-md-4"></div>
+            <div class="col-md-4 my-auto card card-body">
+                <div class="form-group mb-3">
+                    <label for="username_input">Ad Soyad</label>
+                    <input type="text" class="form-control" id="username_input" placeholder="Ad Soyad" name="ad">
+                    <div class="invalid-feedback">Lütfen geçerli bir Ad Soyad giriniz.</div>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="email_input">Email</label>
+                    <input type="email" class="form-control" id="email_input" aria-describedby="emailHelp"
+                        placeholder="Enter email">
+                    <div class="invalid-feedback">Lütfen geçerli bir mail adresi giriniz.</div>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="password_input">Password</label>
+                    <input type="password" class="form-control" id="password_input" placeholder="Password">
+                    <div class="invalid-feedback">Lütfen geçerli bir şifre giriniz. Şifreniz en az 8 karakter olmalıdır.
+                    </div>
+                </div>
+                <div class="form-group mb-3">
+                    <label class="form-check-label" for="country-select">
+                        Ülkeniz
+                    </label>
+                    <select class="form-select" id="country-select">
+                        <option value="Turkey" selected>Turkey</option>
+                        <option value="England">England</option>
+                        <option value="USA">United States of America</option>
+                    </select>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label class="form-check-label" for="interest-select">
+                        İlgi Alanlarınız
+                    </label>
+                    <select class="form-select" id="interest-select" multiple>
+                        <option value="Programming">Programlama</option>
+                        <option value="Kitchen">Mutfak</option>
+                        <option value="Sports">Spor</option>
+                        <option value="Technology">Teknoloji</option>
+                        <option value="Fashion">Moda</option>
+                    </select>
+                </div>
+
+                <div class="form-group mb-3">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="gender-radio" id="erkek-radio" value="M"
+                            checked>
+                        <label class="form-check-label" for="erkek-radio">
+                            Erkek
+                        </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="gender-radio" id="kadin-radio" value="F">
+                        <label class="form-check-label" for="erkek-radio">
+                            Kadın
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-check mb-3">
+                    <input type="checkbox" class="form-check-input" id="maillist_checkbox">
+                    <label class="form-check-label">Haftalık mail listesine abone olmak istiyorum</label>
+                </div>
+
+                <div class="form-check mb-3">
+                    <input type="checkbox" class="form-check-input" id="terms_checkbox">
+                    <label class="form-check-label"><a id="terms_link" href="#">Sözleşmeyi</a>
+                        okudum ve
+                        onaylıyorum.</label>
+                    <div class="invalid-feedback">Lütfen sözleşmeyi kabul ediniz.</div>
+                </div>
+                <button type="submit" class="btn btn-primary" id="submit_button">Üye Ol</button>
+ 
+              
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+
+    <div class="modal" tabindex="-1" role="dialog" id="terms_modal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Sözleşme</h5>
+                    <button type="button" class="close terms_modal_close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Bu bir gizlilik sözleşmesidir. Kutucuğu işaretleyerek bu sözleşmeyi kabul etmiş olursunuz.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary terms_modal_close"
+                        data-dismiss="modal">Kapat</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" tabindex="-1" role="dialog" id="fields_modal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Teşekkürler!</h5>
+                    <button type="button" class="close fields_modal_close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <label>Ad Soyad: </label>
+                        <label id="username_label"></label>
+                    </div>
+                    <div>
+                        <label>Email: </label>
+                        <label id="email_label"></label>
+                    </div>
+                    <div>
+                        <label>Şifre: </label>
+                        <label id="password_label"></label>
+                    </div>
+                    <div>
+                        <label>Sözleşme: </label>
+                        <label id="terms_label"></label>
+                    </div>
+                    <div>
+                        <label>Blog sizemize üye olduğunuz için teşekkür ederiz. Hesabınız oluşturulmuştur. Artık
+                            düşünceleriniz özgürce paylaşabilirsiniz!</label>
+                        <label>NOT: Bu bir test ekranıdır.</label>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary fields_modal_close"
+                        data-dismiss="modal">Kapat</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+<script src="./app.js"></script>
