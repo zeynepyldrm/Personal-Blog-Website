@@ -27,7 +27,7 @@ $(document).ready(function () {
         fieldsModal.modal('hide');
     });
 
-    $(document).on("submit", "#infoForm", function(event){
+    submitButton.on("click", function () {
         var invalid = false;
         usernameInput.removeClass("is-invalid");
         emailInput.removeClass("is-invalid");
@@ -59,23 +59,18 @@ $(document).ready(function () {
         passwordLabel.text(usr.password);
         termsLabel.text(usr.acceptedTerms);
 
-        //fieldsModal.modal('show');
+        fieldsModal.modal('show');
       
         //infoForm id li form post edildiğinde
-            event.preventDefault();
-            $.ajax({
+           /* $.ajax({
                 url: "signForm.php", 
                 type: "POST",             
                 data: usr,
-                dataType: "json",
                 contentType: false,       
                 cache: false,             
                 processData:false, 
-                success: function(data) {
-                    alert(data["result"]); //post sonucunu yazdir
-                    console.log(data['data']); //girilen verileri console ekranina yazdır
-                }
-            });
+                success:console.log("wuqhoeu")
+            });*/
         
     })
 });

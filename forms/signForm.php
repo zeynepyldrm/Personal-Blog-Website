@@ -1,8 +1,15 @@
 <?php
 
-if ($_POST){ //sayfa post edildiyse
-    $dizi['result'] = 'Post Edildi. Veriler console ekranına yazdırıldı';
 
+function status(){
+    if($_POST === true) {
+        $result = true;
+    } else {
+        $result = false;
+    }
+    return $result;
 }
+
+echo json_encode(status());
 
 ?>

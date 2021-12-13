@@ -16,14 +16,13 @@
     
     <!-- Theme CSS -->  
     <link id="theme-style" rel="stylesheet" href="assets/css/theme-1.css">
-    
 
 </head> 
 
 <body>
     
-	<header class="header text-center">	    
-	    <h1 class="blog-name pt-lg-4 mb-0"><a href="index.html">Zeynep 'in Köşesi</a></h1>
+    <header class="header text-center">	    
+	    <h1 class="blog-name pt-lg-4 mb-0"><a href="index.html">Zeynep'in Köşesi</a></h1>
         
 	    <nav class="navbar navbar-expand-lg navbar-dark" >
            
@@ -35,7 +34,7 @@
 				<div class="profile-section pt-3 pt-lg-0">
 				    <img class="profile-image mb-3 rounded-circle mx-auto" src="https://avatars.githubusercontent.com/u/26030027?v=4" alt="image" >			
 					
-					<div class="bio mb-3">Merhaba ben Zeynep Yıldırım. Bilgisayar Mühendisliği öğrencisiyim. Okuduğum ve merak ettiklerim içerikleri burada yazıyorum.<a href="about.html">Daha fazla bilgi için </a></div><!--//bio-->
+					<div class="bio mb-3">Merhaba ben Zeynep Yıldırım. Bilgisayar Mühendisliği öğrencisiyim. Okuduğum ve merak ettiğim içerikleri burada yazıyorum. <a href="about.html">Daha fazla bilgi için </a></div><!--//bio-->
 					<ul class="social-list list-inline py-3 mx-auto">
 			            <li class="list-inline-item"><a href="#"><i class="fab fa-twitter fa-fw"></i></a></li>
 			            <li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
@@ -65,77 +64,34 @@
 		</nav>
     </header>
     
-    
     <div class="main-wrapper">
-	    	    
-	    <article class="about-section py-5">
-		    <div class="container">
-			    <h2 class="title mb-3">Hakkımda</h2>
-			    
-			    <p>Zeynep Yıldırım Bilgisayar Mühendisliği öğrencisiyim.Bu blog da öğrendiğim,merak ettiğim ve okuduklarım üzerine yeni soluk getirmek için yapmaya karar verdim.</p> </p>
-			    <figure></figure>
-			    <h5 class="mt-5">Blog Hakkında</h5>
-			    <p> Yazılıma dair alt alanların içeriklerini bunlar üzerinde kendi yorumumu katarak eklediğim yazılar yeni başlayanlar ya da bu işi tutku haline getirenlerin kafasındaki soru işaretlerini gidermek,onlara yeni bakış açısıyla bir şeyleri anlatabilmek için oluşturuldu.</p>
-				<p>Bu içeriklere katkı sağlamak ekleme ve düzenleme yapmak isteyen arkadaşlarımın da formu doldurup katkı sağlamasını görmek beni de çok heyecanlandırır.Aramıza katıl.</p>
-			    <h5 class="mt-5">Yeteneklerim ve Deneyimlerim</h5>
-			    <p>
-						<table>
-							<td>
-							<ul>
-								<li>
-									HTML
-								</li>
-								<li>
-									CSS
-								</li>
-								<li>JavaScript</li>
-								<li>React.js</li>
-								<li>jQuery</li>
-							</ul>
-							</td>
-							<td>
-									<ul>
-										<li>
-											C#
-										</li>
-										<li>
-											Java
-										</li>
-										<li>Python</li>
-										<li>Flutter</li>
-										<li>MSSQL</li>
-										<li>MySQL</li>
-									</ul>	
-							</td>
-						</table>
-				</p>
-		    </div>
-	    </article><!--//about-section-->
-	    
 	    <section class="cta-section theme-bg-light py-5">
 		    <div class="container text-center">
-			    <h2 class="heading">Yeni Yazılar</h2>
-			    <div class="intro">Blog siteme hoş geldin.Mail listemize ekleyip seni yeni yazılarda hebrdar edelim.</div>
+			    <h2 class="heading">Aktif ve Güncel İçeriklere Donatılmış Blog Websitem </h2>
+			    <div class="intro">Blog siteme hoş geldin. Gelen yazılardan bildirim almak istersen</div>
 			    <form class="signup-form form-inline justify-content-center pt-3">
                     <div class="form-group">
-                        <label class="sr-only" for="semail">Mail Adresin</label>
+                        <label class="sr-only" for="semail">Email</label>
                         <input type="email" id="semail" name="semail1" class="form-control mr-md-1 semail" placeholder="Enter email">
                     </div>
-                    <button type="submit" class="btn btn-primary">Takip Et.</button>
+                    <button type="submit" class="btn btn-primary">Takip Et</button>
                 </form>
 		    </div><!--//container-->
 	    </section>
+	    <?php include 'connection.php';?>
 	    
 	    <footer class="footer text-center py-2 theme-bg-dark">
 		   
 	        <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can buy the commercial license via our website: themes.3rdwavemedia.com */-->
-            <small class="copyright"> <i class="fas fa-heart" style="color: #fb866a;"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank">Zeynep YILDIRIM</a></small>
+                <small class="copyright"><i class="fas fa-heart" style="color: #fb866a;"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank">Zeynep YILDIRIM</a></small>
 		   
 	    </footer>
     
     </div><!--//main-wrapper-->
     
-
+    
+    
+    
     <!-- *****CONFIGURE STYLE (REMOVE ON YOUR PRODUCTION SITE)****** -->  
     <div id="config-panel" class="config-panel d-none d-lg-block">
         <div class="panel-inner">
@@ -161,7 +117,7 @@
     <script src="assets/plugins/jquery-3.3.1.min.js"></script>
     <script src="assets/plugins/popper.min.js"></script> 
     <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script> 
-    
+
     <!-- Style Switcher (REMOVE ON YOUR PRODUCTION SITE) -->
     <script src="assets/js/demo/style-switcher.js"></script>     
     
