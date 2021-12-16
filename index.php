@@ -16,7 +16,8 @@
     
     <!-- Theme CSS -->  
     <link id="theme-style" rel="stylesheet" href="assets/css/theme-1.css">
-
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme-1.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 </head> 
 
 <body>
@@ -78,21 +79,17 @@
                 </form>
 		    </div><!--//container-->
 	    </section>
+
+	     <?php include 'categorySelect.php';?>
 	    <?php include 'connection.php';?>
 	    
 	    <footer class="footer text-center py-2 theme-bg-dark">
-		   
-	        <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can buy the commercial license via our website: themes.3rdwavemedia.com */-->
                 <small class="copyright"><i class="fas fa-heart" style="color: #fb866a;"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank">Zeynep YILDIRIM</a></small>
 		   
 	    </footer>
     
     </div><!--//main-wrapper-->
     
-    
-    
-    
-    <!-- *****CONFIGURE STYLE (REMOVE ON YOUR PRODUCTION SITE)****** -->  
     <div id="config-panel" class="config-panel d-none d-lg-block">
         <div class="panel-inner">
             <a id="config-trigger" class="config-trigger config-panel-hide text-center" href="#"><i class="fas fa-cog fa-spin mx-auto" data-fa-transform="down-6" ></i></a>
@@ -118,10 +115,9 @@
     <script src="assets/plugins/popper.min.js"></script> 
     <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script> 
 
-    <!-- Style Switcher (REMOVE ON YOUR PRODUCTION SITE) -->
+    <!-- Style-->
     <script src="assets/js/demo/style-switcher.js"></script>     
     
 
 </body>
 </html> 
-
