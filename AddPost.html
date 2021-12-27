@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Insert Page page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="jquery.js"></script>
+</head> 
+
+<body>
+    <div id="main" class="vh-100 vw-100" style="background-color: #5bcb73;">
+        <div class="row h-100">
+            <div class="col-md-4"></div>
+           
+            <div class="col-md-4 my-auto card card-body">
+              <form id="infoForm" method="POST" action="AddPost.php">
+                <label for="username_input">Ad Soyad</label>
+                    <input type="text" class="form-control" id="username_input" placeholder="Ad Soyad" name="username">
+                    <div class="invalid-feedback">Lütfen geçerli bir Ad Soyad giriniz.</div>
+                    
+                <div class="form-group mb-3">
+                    <label for="email_input">Konu başlığı</label>
+                    <input type="text" class="form-control" name="header" id="email_input" aria-describedby="emailHelp" >
+                </div>
+                <div class="form-group mb-3">
+                     <label for="exampleFormControlFile1">Konu Başlığı Resimi</label><br>
+                 <input type="file" class="form-control-file" name="headerImage"id="exampleFormControlFile1">
+                    
+                </div>
+                
+                 <div class="form-group mb-3">
+                   <label for="exampleFormControlTextarea1">İçerik Yazısı</label>
+                  <textarea class="form-control" name="content" id="content" ></textarea>
+                </div>
+                
+                 <div class="form-group mb-3">
+                     <label for="exampleFormControlFile1">Konu içeriği resmi</label><br>
+                     <input type="file" class="form-control-file" name="contentImage" id="exampleFormControlFile1">
+                </div>
+               <div class="form-group mb-3">
+                    <label>Ortalama Okunma Süresi</label>
+                    <input type="text" class="form-control" name="averageRead" id="email_input" aria-describedby="emailHelp">
+                    <div class="invalid-feedback">Lütfen ortalama okunma süresi giriniz.</div>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label class="form-check-label" for="interest-select">
+                        Yazının konu kategorisi
+                    </label>
+                    <select class="form-select" name="category" id="interest-select" multiple>
+                        <option value="1">WEB</option>
+                        <option value="2">Mobil</option>
+                        <option value="3">Veri Tabanı</option>
+                        <option value="4">Algoritma</option>
+                        <option value="5">Siber Güvenlik</option>
+                    </select>
+                </div>
+
+
+                <div class="form-check mb-3">
+                    <input type="checkbox" class="form-check-input" id="maillist_checkbox">
+                    <label class="form-check-label">Haftalık mail listesine abone olmak istiyorum</label>
+                </div>
+
+                <div class="form-check mb-3">
+                    <input type="checkbox" class="form-check-input" id="terms_checkbox">
+                    <label class="form-check-label"><a id="terms_link" href="#">Sözleşmeyi</a>
+                        okudum ve
+                        onaylıyorum.</label>
+                    <div class="invalid-feedback">Lütfen sözleşmeyi kabul ediniz.</div>
+                </div>
+                <button type="submit" class="btn btn" id="submit_button" style="background-color: #5bcb73;">Yazıyı Ekle</button>
+ 
+              </form>
+            
+            </div>
+            <div class="col-md-4"></div>
+            
+        </div>
+    </div>
+
+    <div class="modal" tabindex="-1" role="dialog" id="terms_modal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Sözleşme</h5>
+                    <button type="button" class="close terms_modal_close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Bu bir gizlilik sözleşmesidir. Kutucuğu işaretleyerek bu sözleşmeyi kabul etmiş olursunuz.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary terms_modal_close"
+                        data-dismiss="modal">Kapat</button>
+                </div>
+            </div>
+        </div>
+        </form>
+    </div
+
+</body>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+</html>
